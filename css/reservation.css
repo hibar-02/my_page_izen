@@ -1,0 +1,288 @@
+body{
+    background: #f2f2f2;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+a {
+    text-decoration:none
+}
+
+/* HEADER */
+header{
+    width: 100%;
+    height: 85px;
+    background-color: #BFBFBF;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+header div{
+    display: inline;
+    height: 50px;
+    width: 50px;
+}
+
+/* 헤더 좌측 햄버거 */
+#header_x, #header_hamburger{
+    width: 20%;
+    display: flex;
+    cursor: pointer;
+}
+
+#header_x_set, #header_hamburger_set{
+    margin: 25px 0px 0px 20px;
+}
+
+.hamburger img{
+    height: 35px;
+    width: 36px;
+    margin: auto 0;
+    padding-left: 23px;
+}
+
+/* 상단 로고 */
+header .logo{
+    width: 60%;
+    display: flex;
+}
+
+header .logo a{
+    margin: auto;
+}
+
+header .logo a img{
+    height: 75px;
+}
+
+header .hamburger_detail{
+    cursor: pointer;
+}
+
+header #hamburger_korean{
+    margin: -250px 0px 0px 0px;
+    font-size: 18px;
+}
+
+header #hamburger_else{
+    margin: -250px 0px 0px 0px;
+    font-size: 18px;
+}
+
+/* 우측 버튼 */
+header .btn {
+    width: 20%;
+}
+
+header .btn div{
+    display: block;
+    height: 42.5px;
+    width: 100%;
+}
+
+header .btn .btn_top{
+    justify-content: center;
+    align-items: center;
+}
+
+header .btn .btn_top a{
+    padding: 10px 10px 10px 10px;
+    float: right;
+    font-size: 15px;
+    color: black;
+    font-weight: 550;
+    margin: auto 5px;
+}
+
+header .btn .btn_top a:hover{
+    transform: scale(1.1);
+}
+
+header .btn .btn_bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .btn .btn_bottom input{
+    width: 80%;
+    height: 25px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    outline: none;
+}
+
+header .btn .btn_bottom span{
+    color: black;
+}
+
+#search_box{
+    margin: 0px 0px 5px 5px;
+}
+
+main{
+    margin: 85px 0px 0px 0px;
+}
+
+#daumRoughmapContainer1625546572051{
+    margin: auto;
+    padding: 20px 0px 0px 30px;
+}
+
+/* 마이페이지 */
+
+main .my_page{
+    cursor:context-menu;
+    position: fixed;
+    top: 30%;
+    left: 5%;
+    width: 300px;
+    height: auto;
+    font-size: 150%;
+    color: #333;
+    background-color: #feff90;
+    border-radius: 20px;
+    text-align:center;
+    line-height: 80px;
+    padding: 20px 0;
+    
+}
+main .my_page .title{
+    font-size: 30px;
+    font-weight: bold;
+}
+main .my_page .click{
+    padding-top: 10px;
+}
+
+main .my_page .click .sign_in:hover{
+    color: #BFBFBF;
+}
+
+main .my_page .click .sign_up:hover{
+    color: #BFBFBF;
+}
+
+main .my_page .click .reservation:hover{
+    color: #BFBFBF;
+}
+
+main .reser{
+    width: 1000px;
+    height: auto;
+    position:fixed;
+    top: 27%;
+    left: 35%;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+main .reser .title{
+    text-align:left;
+    font-size: 35px;
+    margin:20px auto;
+    cursor: context-menu;
+    padding-bottom: 3%;
+}
+
+main .reser .reservation{
+    margin-left: 8%;
+}
+
+main .reser .reservation .date{
+    font-size: 30px;
+}
+
+main .reser .reservation .date select {
+    cursor: pointer;
+    width: 60px;
+    height: 50px;
+    font-size: 30px;
+    margin-left: 10%;
+    margin-bottom: 10%;
+    border-radius: 10px;
+    background-color: none;
+    color: #333;
+    border: none;
+    border-bottom: 2px solid #BFBFBF;
+    background-color: #f2f2f2;
+
+}
+
+main .reser .reservation .date .year{
+    width: 150px;
+}
+
+main .reser .reservation .date .month {
+    width: 130px;
+}
+
+main .reser .reservation .date .day{
+    width: 130px;
+}
+
+main .reser .reservation .date .year select {
+    cursor: pointer;
+    width: 90px;
+    height: 50px;
+    font-size: 30px;
+    margin-left: 10%;
+    margin-bottom: 10%;
+    
+}
+
+
+main .reser .reservation .date button{
+    margin: auto 15% ;
+    width: 130px;
+    height: 50px;
+    cursor: pointer;
+    background-color: #dfdfdf;
+    color: #333;
+    font-size: 20px;
+    font-weight: bolder;
+    border: none;
+    border-radius: 20px;
+}
+
+main .reser .reservation .date button:hover{
+    transform: scale(1.1);
+}
+
+main .reser .reservation .hid_res{
+    font-size: 30px;
+}
+main .reser .reservation .fir_col{
+    text-align: center;
+    padding: 20px;
+    cursor: context-menu;
+    font-size: 22px;
+}
+
+main .reser .reservation .sec_col{
+    width:fit-content;
+    text-align: left;
+    cursor:context-menu;
+    font-size: 22px;
+}
+main .reser .reservation .cancle_res .btn_cancle_res{
+    padding-left: 80%;
+}
+main .reser .reservation .cancle_res button{
+    margin: auto 15% ;
+    width: 130px;
+    height: 50px;
+    cursor: pointer;
+    background-color: #dfdfdf;
+    color: #333;
+    font-size: 20px;
+    font-weight: bolder;
+    border: none;
+    border-radius: 20px;
+}
+
+main .reser .reservation .cancle_res button:hover{
+    transform: scale(1.1);
+}

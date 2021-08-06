@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <script defer src="./js/main.js"></script>
+    <title>밥쁘다 바빠 현대사회</title>
+    <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+    <!-- X 클릭 시 햄버거 표시 -->
+    <div id="header_x">
+        <img src="../image/x.png"
+        id="header_x_set"
+        alt="x 메뉴"/>
+    </div>
+
+    <!-- 햄버거 클릭 시 X 표시 -->
+    <div id="header_hamburger" style="display: none;">
+        <img src="../image/hamburger.png"
+        id="header_hamburger_set"
+        alt="햄버거 메뉴"/>
+    </div>
+
+    <!-- 상단 로고 -->
+    <div class="logo">
+        <a href="http://127.0.0.1:5500/index.html">
+            <img src="../image/logo.png" alt="밥사 로고" />
+        </a>
+    </div>
+
+    <!-- 우측 버튼 -->
+    <div class="btn">
+        <div class="btn_top">
+            <a class="sign_up" href="">
+                회원가입
+            </a>
+            <a class="log_in" href="">
+                로그인
+            </a>
+        </div>
+        <div class="btn_bottom">
+            <input id="search_box" placeholder="검색어를 입력하세요." />
+            <span class="material-icons">
+                search
+            </span>
+        </div>
+    </div>
+    </header>
+
+    <main>
+    <div class="hamburger_content">
+        <div id="my_information">
+            <b>홍길동</b>님 | 
+            <button id="my_information_btn"
+            onclick="my_information('my_information_hidden'); return false;">
+                🔒︎ 내 정보
+            </button> | 
+            <button id="log_out"> 로그아웃 </button>
+        </div>
+
+        <div id="my_reservation">
+            내 예약
+            <div id="my_reservation_bottom">
+                7월 20일 오전 10시 한식당 A 예약
+                <font class="my_reservation_font">
+                    완료
+                </font><br>
+
+                8월 2일 오후 6시 일식당 A 예약
+                <font class="my_reservation_font">
+                    신청됨
+                </font><br>
+
+                8월 12일 오전 10시 한식당 A 예약
+                <font class="my_reservation_font">
+                    완료
+                </font>
+            </div>
+        </div>
+
+        <div id="wish_restaurant">
+            💛 찜한 가게
+            <div id="wish_restaurant_bottom">
+                한식당 C
+                <button class="wish_restaurant_btn">
+                    바로가기
+                </button><br>
+
+                양식당 X
+                <button class="wish_restaurant_btn">
+                    바로가기
+                </button><br>
+
+                일식당 B
+                <button class="wish_restaurant_btn">
+                    바로가기
+                </button><br>
+            </div>
+        </div>
+
+        <div id="list_restaurant">
+            식당 모아보기
+
+            <button id="list_restaurant_btn">
+                적용하기
+            </button><br>
+
+            <div id="list_restaurant_select">
+                <input type="checkbox"
+                onclick="select_all(this)"/> 모두 선택<br>
+
+                <input type="checkbox" name="menu"> 한식
+
+                <button class="list_restaurant_select"
+                onclick="korean('list_restaurant_korean'); return false;">
+                    더보기
+                </button>
+
+                <div id="list_restaurant_korean">
+                    <input type="checkbox" name="menu"> 분식 <br>
+                    <input type="checkbox" name="menu"> 찜, 탕<br>
+                    <input type="checkbox" name="menu"> 구이<br>
+                    <input type="checkbox" name="menu"> 정식<br>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="menu"> 중식
+                </div>
+
+                <div>
+                    <input type="checkbox" name="menu"> 일식
+                </div>
+
+                <div>
+                    <input type="checkbox" name="menu"> 양식
+                </div>
+
+                <input type="checkbox" name="menu"> 기타
+
+                <button class="list_restaurant_select"
+                onclick="function_4('list_restaurant_else'); return false;">
+                    더보기
+                </button>
+
+                <div id="list_restaurant_else">
+                    <input type="checkbox" name="menu"> 아시안 <br>
+                    <input type="checkbox" name="menu"> 인도 요리 <br>
+                    <input type="checkbox" name="menu"> 프랑스 요리 <br>
+                    <input type="checkbox" name="menu"> 멕시코 요리<br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 클릭하면 나오는 DIV -->
+    <div id="my_information_hidden">
+        <img src="../image/cancel.png"
+        alt="x"
+        id="my_information_hidden_x"
+        onclick="my_information_x()">
+
+        <b> 내 정보 확인 </b>
+
+        <div id="my_information_profile">
+            프로필<br>
+            이름<br>
+            나이<br>
+        </div>
+
+        <div id="my_information_contact">
+            <b> 연락처 및 기본 정보 설정 </b><br>
+            연락처 : <br>
+            본인 확인 연락처 : <br>
+            휴대 전화 : 
+        </div>
+
+        <div id="my_information_location">
+            <b >지역 설정 </b><br>
+            설정된 지역이 없습니다 <br>
+            지금 내 주변의 관심지역을 설정하세요! <br>
+            <button id="my_information_contact_btn">
+                관심지역 설정하러 가기
+            </button>
+        </div>
+    </div>
+
+    <!-- 카카오맵 지도 -->
+    <div>
+        <!-- 1. 지도 노드 -->
+        <div id="daumRoughmapContainer1625546572051" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+        <!-- 2. 설치 스크립트 -->
+        <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+    </div>
+
+    <!-- 보이는 세부 정보표 -->
+    <div class="restaurant_information">
+        위생 등급 : <b>매우 우수</b> / 우수 / 좋음
+        <a href="https://www.mfds.go.kr/brd/m_74/view.do?seq=44042">
+            <b> ▶ 위생등급 지정 현황 </b>
+        </a> <br>
+        평점 : ⭐⭐⭐⭐⭐ <br>
+        수용 인원 : 7 / 25 <br>
+        <button class="restaurant_information_btn" onclick="detail_information('detail_information'); return false;">
+            세부 정보를 보고싶어요
+        </button>
+        <button class="restaurant_information_btn" onclick="placement_information('placement_information'); return false;">
+            자리배치표를 보고싶어요
+        </button>
+    </div>
+
+    <!-- 클릭하면 세부 정보표 등장 -->
+    <div id="detail_information">
+        <img src="../image/cancel.png"
+        alt="x"
+        id="detail_information_x"
+        onclick="detail_information_x()">
+        위생 등급 : <b>매우 우수</b> / 우수 / 좋음
+        <a href="https://www.mfds.go.kr/brd/m_74/view.do?seq=44042">
+            ▶ 위생등급 지정 현황
+        </a> <br>
+        평점 : ⭐⭐⭐⭐⭐ <br>
+        수용 인원 : 7 / 25 <br>
+        
+        <button class="detail_information_btn_1" onclick="dessert('dessert_hidden'); return false;">
+            <b> 주위 디저트 가게 더보기 ▼ </b>
+        </button><br>
+
+        <div id="dessert_hidden">
+            디저트 가게 A 
+            <button class="dessert_hidden_btn">
+                더보기
+            </button><br>
+            디저트 가게 B 
+            <button class="dessert_hidden_btn">
+                더보기
+            </button><br>
+            디저트 가게 C 
+            <button class="dessert_hidden_btn">
+                더보기
+            </button><br>
+            디저트 가게 D
+            <button class="dessert_hidden_btn">
+                더보기
+            </button>
+        </div>
+        
+        <button class="detail_information_btn_2">
+            예약하기
+        </button>
+
+        <button class="detail_information_btn_2">
+            카카오톡 공유
+        </button>
+    </div>
+
+    <!-- 숨겨진 자리배치표 등장 -->
+    <div id="placement_information">
+        <img src="../image/cancel.png"
+        alt="x"
+        id="placement_information_x"
+        onclick="placement_information_x()">
+
+        <button class="placement_btn"
+        onclick="location.href='./배치표/c_1/c_1.html'"> 배치표 1 </button><br>
+        <button class="placement_btn"
+        onclick="location.href='./배치표/c_2/c_2.html'"> 배치표 2 </button><br>
+        <button class="placement_btn"
+        onclick="location.href='./배치표/c_3/c_3.html'"> 배치표 3 </button><br>
+        <button class="placement_btn"
+        onclick="location.href='./배치표/c_4/c_4.html'"> 배치표 4 </button><br>
+        <button class="placement_btn"
+        onclick="location.href='./배치표/c_5/c_5.html'"> 배치표 5 </button>
+    </div>
+    
+    <!-- 퀵 메뉴 -->
+    <div class="quickmenu">
+        <img src="../image/logo.png" id="quickmenu_logo">
+        <button class="quickmenu_btn">
+            오늘 점심 뭐 먹지?
+        </button><br>
+
+        <button class="quickmenu_btn">
+            오늘 식당 랭킹?
+        </button><br>
+
+        <button class="quickmenu_btn">
+            위생등급 불량 식당?
+        </button><br>
+
+        <button class="quickmenu_btn" onclick="confirmed_patient('confirmed_patient')">
+            오늘 서울시 확진자 수는?
+        </button>
+    </div>
+
+    <!-- 퀵 메뉴 - 숨겨진 div -->
+    <!-- 서울시 확진자 수 등장 -->
+    <div id="confirmed_patient">
+        오늘의 확진자
+    </div>
+    </main>
+</body>
+</html>

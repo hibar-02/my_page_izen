@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reservation.css">
+    <script defer src="./js/reservation.js"></script>
+    <title>밥쁘다 바빠 현대사회</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+    <!-- X 클릭 시 햄버거 표시 -->
+    <div id="header_x">
+        <img src="./x.png"
+        id="header_x_set"
+        alt="x 메뉴"/>
+    </div>
+
+    <!-- 햄버거 클릭 시 X 표시 -->
+    <div id="header_hamburger" style="display: none;">
+        <img src="./hamburger.png"
+        id="header_hamburger_set"
+        alt="햄버거 메뉴"/>
+    </div>
+
+    <!-- 상단 로고 -->
+    <div class="logo">
+        <a href="http://127.0.0.1:5500/index.html">
+            <img src="./logo.png" alt="밥사 로고" />
+        </a>
+    </div>
+
+    <!-- 우측 버튼 -->
+    <div class="btn">
+        <div class="btn_top">
+            <a class="sign_up" href="">
+                회원가입
+            </a>
+            <a class="log_in" href="">
+                로그인
+            </a>
+        </div>
+        <div class="btn_bottom">
+            <input id="search_box" placeholder="검색어를 입력하세요." />
+            <span class="material-icons">
+                search
+            </span>
+        </div>
+    </div>
+    </header>
+
+    <main>
+        <!-- 마이페이지 선택 바 -->
+        <div class="my_page">
+            <div class="title">
+                <h1>MY PAGE</h1>
+            </div>
+            <div class="click">
+                <div class="sing_in">
+                    <a href="./sign_in.html" class="sign_in">로그인</a>
+                </div>
+                <div class="sign_up">
+                    <a href="./sign_up.html" class="sign_up">회원가입</a>
+                </div>
+                <div class="reservation">
+                <a href="./reservation.html" class="reservation">예약확인</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 예약 확인  -->
+        <div class="reser">
+            <form action="" method="POST">
+                <div class="title">
+                    <h1>RESERVATION</h1>
+                </div>
+                <table class="reservation">
+                    <!-- 날짜 선택 -->
+                    <tr class="date">
+                        <td class="year">
+                            <select name="year" id="year">
+                                <option value="cho">    </option>
+                                <option value="2021">2021</option>    
+                            </select>
+                            년
+                        </td>
+                        <td class="month">
+                            <select name="month" id="month">
+                                <option value="cho">  </option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>    
+                            </select>
+                            월
+                        </td>
+                        <td class="day">
+                            <select name="day" id="day">
+                                <option value="cho">  </option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>   
+                            </select>
+                            일
+                        </td>
+                        <td class="sch">
+                            <button class="serch_res_day" type="submit">조회하기</button>
+                        </td>
+                    </tr>
+                    
+                    <!-- 날짜 선택 후 보여질 화면 -->
+                    <div class="hid_res">
+                        <tr class="place">
+                            <td class="fir_col">장소</td>
+                            <td class="sec_col">
+                            <output>팔백집 돈암점</output>
+                            </td>
+                        </tr>
+                        <tr class="time">
+                            <td class="fir_col">시간</td>
+                            <td class="sec_col">
+                                <output>오후 3시</output>
+                            </td>
+                        </tr>
+                        <tr class="seat">
+                            <td class="fir_col">좌석</td>
+                            <td class="sec_col">
+                                <output>3번 테이블(2인석)</output>
+                            </td>
+                        </tr>
+                        <tr class="menu"> 
+                            <td class="fir_col">메뉴</td>
+                            <td class="sec_col">지정 안 함</td>
+                        </tr>
+                        <tr class="cancle_res">
+                            <td class="btn_cancle_res"><button>예약 취소</button></td>
+                        </tr>
+                    </div>
+                </table>
+            </form>
+            
+
+        </div>
+    </main>
+</body>
