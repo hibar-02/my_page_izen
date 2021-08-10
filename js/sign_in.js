@@ -18,3 +18,7 @@ $(document).ready(function(){
 		$("#header_hamburger").hide();
 	});
 });
+// 로그인 기능 구현...!
+// 하고싶다
+// 언제쯤 할 수 있을지
+// SQL도 시도했지만 모르겠다
